@@ -14,7 +14,7 @@ CFLAGS += -I./STM32L4xx_HAL_Driver/Inc
 CFLAGS += -I./CMSIS/Device/ST/STM32L4xx/Include/
 CFLAGS += -I./ -c -fno-common -Os -g -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -fdata-sections -fno-builtin -Wno-unused-function -ffreestanding
 CFLAGS += -I./BSP/STM32L4xx_Nucleo_32/
-LFLAGS = -Tstm32l4.ld -nostartfiles -Wl,--gc-sections
+LFLAGS = -Tstm32l4.ld -nostartfiles -Wl,--gc-sections -Wl,-Map,main.map -mthumb
 
 # our code
 OBJS = main.o clock.o
