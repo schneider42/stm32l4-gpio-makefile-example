@@ -25,7 +25,7 @@ SECTIONS
 
     .bss : {
         _bss = .;
-        *(.bss)
+        *(.bss*)
         _ebss = .;
     } >ram
 
